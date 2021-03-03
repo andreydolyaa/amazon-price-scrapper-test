@@ -1,0 +1,21 @@
+.item-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.item-data img{
+    width:300px;
+}
+.item-data > * {
+    margin:1rem;
+}
+.item-data .loading{
+    width:20px;
+}
+.flex{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}

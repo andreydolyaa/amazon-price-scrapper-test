@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Amazon Price Tracker</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-danger text-center mt-3">Amazon Price Tracker</h1>
+        <div>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputURL1" class="form-label">Item URL</label>
+                    <input type="text" oninput="getData(this.value)" class="form-control item-url" id="exampleInputURL1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Enter the URL of the item page. eg -
+                        https://www.amazon.com/Redragon-S101-Keyboard-Ergonomic-Programmable/dp/B00NLZUM36/ref=sr_1_3?dchild=1&keywords=keyboard&qid=1614772832&sr=8-3
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Your Email</label>
+                    <input type="email" class="form-control email" id="exampleInputEmail1">
+                    <div id="emailHelp" class="form-text ">For now this service works only with Gmail.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Set the price which you want be notified
+                        about</label>
+                    <input type="number" class="form-control expected" id="exampleInputEmail1">
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="submitForm(event)">Submit</button>
+            </form>
+        </div>
+        <div class="item-data">
+        </div>
+    </div>
+    <script src="./js/formController.js"></script>
+    <script src="./js/service.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./lib/axios.min.js"></script>
+</body>
+
+</html>
